@@ -3,6 +3,7 @@
 namespace BikeShop\Domain;
 
 use BikeShop\Collection\VeloCollection;
+use BikeShop\Interface\ReductionTarifInterface;
 
 class Panier
 {
@@ -25,7 +26,7 @@ class Panier
         }
     }
 
-    public function getTotal(): float
+    public function getTotal(?ReductionTarifInterface $reduction = null): float
     {
         return array_sum(
             array_map(
@@ -34,6 +35,6 @@ class Panier
                 },
                 $this->velos->getAll()
             )
-        );
+        ) * ($reduction?->getPourcentage() ?? 1);
     }
 }
