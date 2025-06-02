@@ -1,13 +1,18 @@
 <?php
 namespace BikeShop\Domain;
+use BikeShop\Collection\AccessoiresCollection;
+
 abstract class AbstractVelo
 {
+    private AccessoiresCollection $accessoires;
+
     public function __construct(
         protected string $marque,
         protected int $prix,
         protected string $couleur
     )
     {
+        $this->accessoires = new AccessoiresCollection();
     }
 
     public function getMarque(): string
@@ -17,12 +22,24 @@ abstract class AbstractVelo
 
     public function getPrix(): int
     {
-        return $this->prix;
+        return $this->prix + array_sum(
+            array_map(
+                function (AbstractAccessoire $accessoire) {
+                    return $accessoire->getPrix();
+                },
+                $this->accessoires->getAll()
+            )
+        );
     }
 
     public function getCouleur(): string
     {
         return $this->couleur;
+    }
+
+    public function getAccessoires(): AccessoiresCollection
+    {
+        return $this->accessoires;
     }
 
     /**
@@ -37,6 +54,17 @@ abstract class AbstractVelo
         foreach ($props as $key => $value) {
             $message .= $key . ": " . $value . "\n";
         }
+
+        // Affichage des accessoire
+        if ($this->accessoires->count() > 0) {
+            $message .= "-- Accessoires --" . PHP_EOL;
+
+            /** @var AbstractAccessoire $accessoire */
+            foreach ($this->accessoires->getAll() as $accessoire) {
+                $message .= $accessoire->getNom() . " - " . $accessoire->getPrix() . " €" . PHP_EOL;
+            }
+        }
+
         echo $message;
     }
 
