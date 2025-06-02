@@ -39,4 +39,9 @@ abstract class AbstractVelo
         }
         echo $message;
     }
+
+    public function afficherConfiguration(): void
+    {
+        $this->displayConfigurationFromChildren(get_object_vars($this));
+    }
 }
