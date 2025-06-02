@@ -11,5 +11,8 @@ dump:
 student:
 	$(PHP) ./Student/index.php
 
+product:
+	$(PHP) ./Product/index.php
 
-.PHONY: build dump student
+
+.PHONY: build dump student product
