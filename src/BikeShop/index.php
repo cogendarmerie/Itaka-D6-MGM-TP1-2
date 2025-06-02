@@ -1,7 +1,6 @@
 <?php
 namespace BikeShop;
 use BikeShop\Collection\ProduitsCollection;
-use BikeShop\Collection\VeloCollection;
 use BikeShop\Domain\Accessoire\MoteurElectricqueAccessoire;
 use BikeShop\Domain\Accessoire\PackLampes;
 use BikeShop\Domain\Accessoire\PanierAvantAccessoire;
