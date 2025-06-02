@@ -1,0 +1,8 @@
+###> Dependencies
+/vendor/
+###< Dependencies
+
+###> IDE
+.code
+.idea
+###< IDE

@@ -1,0 +1,16 @@
+{
+    "name": "cogendarmerie/itaka-d6-mgm-tp1-2",
+    "description": "TP Poo It-Akademy",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Student\\": "Student/"
+        }
+    },
+    "authors": [
+        {
+            "name": "cogendarmerie"
+        }
+    ],
+    "require": {}
+}
