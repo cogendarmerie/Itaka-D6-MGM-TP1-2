@@ -2,7 +2,9 @@
 
 namespace BikeShop\Domain;
 
-abstract class AbstractAccessoire
+use BikeShop\Interface\ProduitInterface;
+
+abstract class AbstractAccessoire implements ProduitInterface
 {
     public function __construct(
         private string $nom,
@@ -16,8 +18,14 @@ abstract class AbstractAccessoire
         return $this->nom;
     }
 
-    public function getPrix(): int
+    public function getPrix(): float
     {
         return $this->prix;
+    }
+
+    public function afficherConfiguration(): void
+    {
+        echo "------------" . PHP_EOL;
+        echo "{$this->getNom()} - {$this->getPrix()} €" . PHP_EOL;
     }
 }

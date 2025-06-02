@@ -8,7 +8,7 @@ class VeloTandem extends AbstractVelo
 {
     public function __construct(
         string $marque,
-        int $prix,
+        float $prix,
         string $couleur,
         private int $nombreDePlaces = 2
     )

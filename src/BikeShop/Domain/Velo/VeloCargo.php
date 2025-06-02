@@ -3,12 +3,13 @@
 namespace BikeShop\Domain\Velo;
 
 use BikeShop\Domain\AbstractVelo;
+use BikeShop\Interface\ProduitInterface;
 
 class VeloCargo extends AbstractVelo
 {
     public function __construct(
         string $marque,
-        int $prix,
+        float $prix,
         string $couleur,
         private int $nombreRoues,
         private int $volumeStockage

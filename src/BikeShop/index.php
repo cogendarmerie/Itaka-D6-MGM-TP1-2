@@ -1,7 +1,9 @@
 <?php
 namespace BikeShop;
+use BikeShop\Collection\ProduitsCollection;
 use BikeShop\Collection\VeloCollection;
 use BikeShop\Domain\Accessoire\MoteurElectricqueAccessoire;
+use BikeShop\Domain\Accessoire\PackLampes;
 use BikeShop\Domain\Accessoire\PanierAvantAccessoire;
 use BikeShop\Domain\Accessoire\PorteBebeAccessoire;
 use BikeShop\Domain\Panier;
@@ -21,11 +23,16 @@ $cargo->getAccessoires()->add(new PanierAvantAccessoire());
 $cargo->getAccessoires()->add(new PorteBebeAccessoire());
 $cargo->getAccessoires()->add(new MoteurElectricqueAccessoire());
 
-$velos = new VeloCollection();
-$velos->add($tandem);
-$velos->add($cargo);
+$packLampes = new PackLampes();
+$moteurElectricqueRechange = new MoteurElectricqueAccessoire();
 
-$panier = new Panier($velos);
+$produits = new ProduitsCollection();
+$produits->add($tandem);
+$produits->add($cargo);
+$produits->add($packLampes);
+$produits->add($moteurElectricqueRechange);
+
+$panier = new Panier($produits);
 
 $panier->afficherContenu();
 echo "Total : {$panier->getTotal()} €" . PHP_EOL;

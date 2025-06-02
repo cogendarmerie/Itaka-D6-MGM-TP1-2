@@ -2,27 +2,28 @@
 
 namespace BikeShop\Domain;
 
-use BikeShop\Collection\VeloCollection;
+use BikeShop\Collection\ProduitsCollection;
+use BikeShop\Interface\ProduitInterface;
 use BikeShop\Interface\ReductionTarifInterface;
 
 class Panier
 {
     public function __construct(
-        private VeloCollection $velos
+        private ProduitsCollection $produits
     )
     {
     }
 
-    public function getVelos(): VeloCollection
+    public function getProduits(): ProduitsCollection
     {
-        return $this->velos;
+        return $this->produits;
     }
 
     public function afficherContenu(): void
     {
-        /** @var AbstractVelo $velo */
-        foreach ($this->velos->getAll() as $velo) {
-            $velo->afficherConfiguration();
+        /** @var ProduitInterface $produit */
+        foreach ($this->produits->getAll() as $produit) {
+            $produit->afficherConfiguration();
         }
     }
 
@@ -30,10 +31,10 @@ class Panier
     {
         return array_sum(
             array_map(
-                function (AbstractVelo $velo) {
-                    return $velo->getPrix();
+                function (ProduitInterface $produit) {
+                    return $produit->getPrix();
                 },
-                $this->velos->getAll()
+                $this->produits->getAll()
             )
         ) * ($reduction ? 1 - $reduction->getPourcentage() : 1);
     }

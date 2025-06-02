@@ -1,14 +1,15 @@
 <?php
 namespace BikeShop\Domain;
 use BikeShop\Collection\AccessoiresCollection;
+use BikeShop\Interface\ProduitInterface;
 
-abstract class AbstractVelo
+abstract class AbstractVelo implements ProduitInterface
 {
     private AccessoiresCollection $accessoires;
 
     public function __construct(
         protected string $marque,
-        protected int $prix,
+        protected float $prix,
         protected string $couleur
     )
     {
@@ -20,7 +21,11 @@ abstract class AbstractVelo
         return $this->marque;
     }
 
-    public function getPrix(): int
+    /**
+     * Calculer le prix du vélo avec accessoires inclus
+     * @return float
+     */
+    public function getPrix(): float
     {
         return $this->prix + array_sum(
             array_map(
