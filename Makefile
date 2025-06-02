@@ -14,5 +14,8 @@ student:
 product:
 	$(PHP) ./src/Product/index.php
 
+velo:
+	$(PHP) ./src/BikeShop/index.php
 
-.PHONY: build dump student product
+
+.PHONY: build dump student product velo

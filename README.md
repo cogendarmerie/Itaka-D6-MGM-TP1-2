@@ -13,3 +13,9 @@ make student
 ```shell
 make product
 ```
+
+# Boutique vélo
+
+```shell
+make velo
+```

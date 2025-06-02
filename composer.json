@@ -5,7 +5,8 @@
     "autoload": {
         "psr-4": {
             "Student\\": "src/Student/",
-            "Product\\": "src/Product/"
+            "Product\\": "src/Product/",
+            "BikeShop\\": "src/BikeShop/"
         }
     },
     "authors": [
