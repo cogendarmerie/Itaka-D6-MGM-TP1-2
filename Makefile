@@ -17,5 +17,8 @@ product:
 velo:
 	$(PHP) ./src/BikeShop/index.php
 
+banque:
+	$(PHP) ./src/CompteBancaire/index.php
 
-.PHONY: build dump student product velo
+
+.PHONY: build dump student product velo banque

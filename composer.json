@@ -6,7 +6,8 @@
         "psr-4": {
             "Student\\": "src/Student/",
             "Product\\": "src/Product/",
-            "BikeShop\\": "src/BikeShop/"
+            "BikeShop\\": "src/BikeShop/",
+            "CompteBancaire\\": "src/CompteBancaire/"
         }
     },
     "authors": [
