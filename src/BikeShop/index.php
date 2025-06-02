@@ -1,6 +1,7 @@
 <?php
 namespace BikeShop;
 use BikeShop\Collection\VeloCollection;
+use BikeShop\Domain\Accessoire\MoteurElectricqueAccessoire;
 use BikeShop\Domain\Accessoire\PanierAvantAccessoire;
 use BikeShop\Domain\Accessoire\PorteBebeAccessoire;
 use BikeShop\Domain\Panier;
@@ -12,8 +13,11 @@ require __DIR__ . '/../../vendor/autoload.php';
 $tandem = new VeloTandem("Cyclocity", 12000, "bleu");
 $cargo = new VeloCargo("Decathlon", 10000, "noir", 3, 10);
 
+$tandem->getAccessoires()->add(new MoteurElectricqueAccessoire());
+
 $cargo->getAccessoires()->add(new PanierAvantAccessoire());
 $cargo->getAccessoires()->add(new PorteBebeAccessoire());
+$cargo->getAccessoires()->add(new MoteurElectricqueAccessoire());
 
 $velos = new VeloCollection();
 $velos->add($tandem);
