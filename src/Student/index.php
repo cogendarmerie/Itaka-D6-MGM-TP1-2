@@ -1,6 +1,6 @@
 <?php
 namespace Student;
-require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/../../vendor/autoload.php';
 
 use Student\Collection\EtudiantsCollection;
 use Student\Domain\Classe;

@@ -9,10 +9,10 @@ dump:
 	$(COMPOSER) dump-autoload
 
 student:
-	$(PHP) ./Student/index.php
+	$(PHP) ./src/Student/index.php
 
 product:
-	$(PHP) ./Product/index.php
+	$(PHP) ./src/Product/index.php
 
 
 .PHONY: build dump student product
