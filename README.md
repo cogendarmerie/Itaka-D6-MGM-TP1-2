@@ -14,6 +14,12 @@ make student
 make product
 ```
 
+# TP 3 - Compte bancaire
+
+```shell
+make banque
+```
+
 # Boutique vélo
 
 ```shell
