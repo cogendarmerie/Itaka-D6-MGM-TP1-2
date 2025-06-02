@@ -1,10 +1,11 @@
 <?php
 namespace CompteBancaire;
 use CompteBancaire\Domain\CompteBancaire;
+use CompteBancaire\Domain\CompteBancaireType\LivretA;
 
 require __DIR__ . '/../../vendor/autoload.php';
 
-$compteBancaire = new CompteBancaire(100000, "John DOE");
+$compteBancaire = new CompteBancaire(100000, "John DOE", new LivretA());
 
 $compteBancaire->retrait(1000);
 $compteBancaire->depot(100);

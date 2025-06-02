@@ -1,10 +1,13 @@
 <?php
 namespace CompteBancaire\Domain;
+use CompteBancaire\Interface\CompteBancaireTypeInterface;
+
 class CompteBancaire
 {
     public function __construct(
         private float $solde,
-        private string $titulaire
+        private string $titulaire,
+        private CompteBancaireTypeInterface $type
     )
     {
     }
@@ -17,6 +20,11 @@ class CompteBancaire
     public function getTitulaire(): string
     {
         return $this->titulaire;
+    }
+
+    public function getType(): CompteBancaireTypeInterface
+    {
+        return $this->type;
     }
 
     public function retrait(float $montant): void
@@ -33,7 +41,7 @@ class CompteBancaire
 
     public function calculerInteret(): float
     {
-        return $this->solde * 1.024 - $this->solde;
+        return $this->solde * $this->type->getPourcentageInteret() - $this->solde;
     }
 
     public function afficherSolde(): void
