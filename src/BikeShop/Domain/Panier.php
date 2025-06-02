@@ -35,6 +35,6 @@ class Panier
                 },
                 $this->velos->getAll()
             )
-        ) * ($reduction?->getPourcentage() ?? 1);
+        ) * ($reduction ? 1 - $reduction->getPourcentage() : 1);
     }
 }

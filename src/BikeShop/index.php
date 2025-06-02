@@ -5,6 +5,7 @@ use BikeShop\Domain\Accessoire\MoteurElectricqueAccessoire;
 use BikeShop\Domain\Accessoire\PanierAvantAccessoire;
 use BikeShop\Domain\Accessoire\PorteBebeAccessoire;
 use BikeShop\Domain\Panier;
+use BikeShop\Domain\ReducationTarif\ReductionEmploye;
 use BikeShop\Domain\ReducationTarif\ReductionEtudiant;
 use BikeShop\Domain\Velo\VeloCargo;
 use BikeShop\Domain\Velo\VeloTandem;
@@ -27,4 +28,6 @@ $velos->add($cargo);
 $panier = new Panier($velos);
 
 $panier->afficherContenu();
-echo "Total : {$panier->getTotal(new ReductionEtudiant())} €";
+echo "Total : {$panier->getTotal()} €" . PHP_EOL;
+echo "Total étudiant : {$panier->getTotal(new ReductionEtudiant())} €". PHP_EOL;
+echo "Total employé : {$panier->getTotal(new ReductionEmploye())} €";

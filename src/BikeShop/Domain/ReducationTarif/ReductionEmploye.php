@@ -4,11 +4,11 @@ namespace BikeShop\Domain\ReducationTarif;
 
 use BikeShop\Interface\ReductionTarifInterface;
 
-class ReductionEtudiant implements ReductionTarifInterface
+class ReductionEmploye implements ReductionTarifInterface
 {
 
     public function getPourcentage()
     {
-        return 0.1;
+        return 0.5;
     }
 }
