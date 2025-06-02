@@ -7,3 +7,9 @@ Pour lancer chacun des projets, utilisez le fichier Makefile.
 ```shell
 make student
 ```
+
+# TP 2 - Produit
+
+```shell
+make product
+```
