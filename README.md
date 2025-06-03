@@ -26,6 +26,12 @@ make banque
 make livres
 ```
 
+# TP 5 - Véhicule
+
+```shell
+make vehicule
+```
+
 # Boutique vélo
 
 ```shell

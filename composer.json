@@ -9,7 +9,8 @@
             "Product\\": "src/Product/",
             "BikeShop\\": "src/BikeShop/",
             "CompteBancaire\\": "src/CompteBancaire/",
-            "Livres\\": "src/Livres/"
+            "Livres\\": "src/Livres/",
+            "Vehicule\\": "src/Vehicule/"
         }
     },
     "authors": [
