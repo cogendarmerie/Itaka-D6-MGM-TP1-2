@@ -20,6 +20,12 @@ make product
 make banque
 ```
 
+# TP 4 - Bibliothèque
+
+```shell
+make livres
+```
+
 # Boutique vélo
 
 ```shell
