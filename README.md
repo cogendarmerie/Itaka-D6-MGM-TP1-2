@@ -44,6 +44,12 @@ make zoo
 make geometrie
 ```
 
+# TP 8 - Ecommerce
+
+```shell
+make ecommerce
+```
+
 # Boutique vélo
 
 ```shell

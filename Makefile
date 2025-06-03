@@ -32,5 +32,8 @@ zoo:
 geometrie:
 	$(PHP) ./src/Geometrie/index.php
 
+ecommerce:
+	$(PHP) ./src/Ecommerce/index.php
 
-.PHONY: build dump student product velo banque livres vehicule zoo geometrie
+
+.PHONY: build dump student product velo banque livres vehicule zoo geometrie ecommerce

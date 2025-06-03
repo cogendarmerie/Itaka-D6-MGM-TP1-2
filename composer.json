@@ -12,7 +12,8 @@
             "Livres\\": "src/Livres/",
             "Vehicule\\": "src/Vehicule/",
             "Zoo\\": "src/Zoo/",
-            "Geometrie\\": "src/Geometrie/"
+            "Geometrie\\": "src/Geometrie/",
+            "Ecommerce\\": "src/Ecommerce/"
         }
     },
     "authors": [
