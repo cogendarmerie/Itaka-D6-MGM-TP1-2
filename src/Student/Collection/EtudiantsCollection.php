@@ -23,6 +23,7 @@ class EtudiantsCollection
         for ($i = 0; $i < count($this->etudiants); $i++) {
             if ($this->etudiants[$i]->isSame($deletedStudent)) {
                 unset($this->etudiants[$i]);
+                break;
             }
         }
     }
