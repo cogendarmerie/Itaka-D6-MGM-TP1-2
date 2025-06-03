@@ -38,6 +38,12 @@ make vehicule
 make zoo
 ```
 
+# TP 7 - Geometrie
+
+```shell
+make geometrie
+```
+
 # Boutique vélo
 
 ```shell

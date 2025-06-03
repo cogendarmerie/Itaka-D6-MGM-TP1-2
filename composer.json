@@ -11,7 +11,8 @@
             "CompteBancaire\\": "src/CompteBancaire/",
             "Livres\\": "src/Livres/",
             "Vehicule\\": "src/Vehicule/",
-            "Zoo\\": "src/Zoo/"
+            "Zoo\\": "src/Zoo/",
+            "Geometrie\\": "src/Geometrie/"
         }
     },
     "authors": [
