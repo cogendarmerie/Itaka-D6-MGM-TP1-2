@@ -4,10 +4,12 @@
     "type": "project",
     "autoload": {
         "psr-4": {
+            "Config\\": "src/Config",
             "Student\\": "src/Student/",
             "Product\\": "src/Product/",
             "BikeShop\\": "src/BikeShop/",
-            "CompteBancaire\\": "src/CompteBancaire/"
+            "CompteBancaire\\": "src/CompteBancaire/",
+            "Livres\\": "src/Livres/"
         }
     },
     "authors": [

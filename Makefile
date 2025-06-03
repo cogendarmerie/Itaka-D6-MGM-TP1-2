@@ -20,5 +20,8 @@ velo:
 banque:
 	$(PHP) ./src/CompteBancaire/index.php
 
+livres:
+	$(PHP) ./src/Livres/index.php
 
-.PHONY: build dump student product velo banque
+
+.PHONY: build dump student product velo banque livres
