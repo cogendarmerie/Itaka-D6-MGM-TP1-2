@@ -37,7 +37,8 @@ $matteo = new Etudiant(
 );
 
 $alexRider->emprunter($john);
-$alexRider->emprunter($matteo);
+$heartstopper->emprunter($matteo);
+$heartstopper->emprunter($john);
 
-$alexRider->retourner();
-$alexRider->emprunter($matteo);
+$heartstopper->retourner();
+$heartstopper->emprunter($john);

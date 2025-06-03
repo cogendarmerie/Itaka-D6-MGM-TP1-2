@@ -16,6 +16,11 @@ class Notification
         echo TerminalColorEnum::RED->value . $message . TerminalColorEnum::RESET->value . PHP_EOL;
     }
 
+    public static function showWarningMessage(string $message): void
+    {
+        echo TerminalColorEnum::YELLOW->value . $message . TerminalColorEnum::RESET->value . PHP_EOL;
+    }
+
     public static function showMessage(string $message): void
     {
         echo $message . PHP_EOL;

@@ -5,6 +5,7 @@ namespace Livres\Domain\Livre;
 use Config\Domain\Notification;
 use Livres\Domain\AbstractLivre;
 use Livres\Enum\FormatNumeriqueEnum;
+use Student\Domain\Etudiant;
 
 class LivreEbook extends AbstractLivre
 {
@@ -29,5 +30,15 @@ class LivreEbook extends AbstractLivre
         Notification::showMessage("Auteur : " . $this->getAuteur());
         Notification::showMessage("Année publication : " . $this->getAnneePublication());
         Notification::showMessage("Format : " . $this->getFormatNumerique()->name);
+    }
+
+    public function emprunter(Etudiant $emprunteur): void
+    {
+        Notification::showWarningMessage("Livre {$this->getTitre()} au format numérique - Pas d'emprunt possible");
+    }
+
+    public function retourner(): void
+    {
+        Notification::showErrorMessage("Livre Ebook - Aucun retour");
     }
 }
