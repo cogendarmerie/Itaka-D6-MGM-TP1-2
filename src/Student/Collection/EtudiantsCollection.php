@@ -18,6 +18,15 @@ class EtudiantsCollection
         return $this->etudiants;
     }
 
+    public function delete(Etudiant $deletedStudent): void
+    {
+        for ($i = 0; $i < count($this->etudiants); $i++) {
+            if ($this->etudiants[$i]->isSame($deletedStudent)) {
+                unset($this->etudiants[$i]);
+            }
+        }
+    }
+
     public function get(int $index): ?Etudiant
     {
         return $this->etudiants[$index] ?? null;

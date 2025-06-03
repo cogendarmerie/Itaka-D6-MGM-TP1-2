@@ -53,4 +53,9 @@ class Etudiant
     {
         Notification::showMessage($this->nom . " " . $this->prenom . " | Moyenne : " . $this->calculerMoyenne());
     }
+
+    public function isSame(Etudiant $etudiant): bool
+    {
+        return $etudiant->getNom() === $this->nom && $etudiant->getPrenom() === $this->prenom;
+    }
 }

@@ -27,5 +27,7 @@ $etudiants->add($studentJohn);
 $etudiants->add($studentGaetan);
 $etudiants->add($studentMatteo);
 
+$etudiants->delete($studentJohn);
+
 $DFS32a = new Classe($etudiants);
 $DFS32a->afficherInformations();
