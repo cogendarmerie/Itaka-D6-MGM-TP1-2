@@ -27,6 +27,7 @@ class PaiementCollection
     {
         /** @var AbstractPaiement $paiement */
         foreach ($this->paiements as $paiement) {
+            $paiement->afficherMontant();
             $paiement->process();
         }
     }
