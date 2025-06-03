@@ -96,4 +96,28 @@ abstract class AbstractVehicule
         Notification::showMessage("Prochain entretien : {$this->prochainEntretien()->format('d/m/Y')}");
     }
 
+    /**
+     * Afficher les info
+     * @param array $infos
+     * @return void
+     */
+    protected function displayInfos(array $infos): void
+    {
+        Notification::showTitle($this->getMarque()->name . ' - ' . $this->getModele());
+        foreach ($infos as $key => $info) {
+            Notification::showMessage($key . ' : ' . $info);
+        }
+    }
+
+    public function afficherInfos(): void
+    {
+        $this->displayInfos([
+            'marque' => $this->marque->name,
+            'modele' => $this->modele,
+            'annee' => $this->annee,
+            'kilometrage' => $this->kilometrage,
+            'nombre entretiens' => $this->entretiens->count(),
+        ]);
+        $this->entretiens->afficherEntretiens();
+    }
 }

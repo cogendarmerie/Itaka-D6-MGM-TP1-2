@@ -18,8 +18,21 @@ class Moto extends AbstractVehicule
         parent::__construct($marque, $modele, $annee, $kilometrage);
     }
 
-    public function getCilydree(): int
+    public function getCilyndree(): int
     {
         return $this->cilyndree;
+    }
+
+    public function afficherInfos(): void
+    {
+        $this->displayInfos([
+            'marque' => $this->getMarque()->name,
+            'modele' => $this->getModele(),
+            'annee' => $this->getAnnee(),
+            'kilometrage' => $this->getKilometrage(),
+            'nombre entretiens' => $this->getEntretiens()->count(),
+            'cilyndree' => $this->getCilyndree(),
+        ]);
+        $this->getEntretiens()->afficherEntretiens();
     }
 }
