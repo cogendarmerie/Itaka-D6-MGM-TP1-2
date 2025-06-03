@@ -2,6 +2,7 @@
 
 namespace Vehicule\Collection;
 
+use Config\Domain\Notification;
 use Vehicule\Domain\AbstractChargement;
 
 class ChargementCollection
@@ -28,5 +29,15 @@ class ChargementCollection
         return array_sum(array_map(function (AbstractChargement $chargement) {
             return $chargement->getPoids();
         }, $this->chargements));
+    }
+
+    public function afficherChargements(): void
+    {
+        Notification::showTitle("Contenu du chargement");
+
+        /** @var AbstractChargement $chargement */
+        foreach ($this->chargements as $chargement) {
+            Notification::showMessage($chargement);
+        }
     }
 }

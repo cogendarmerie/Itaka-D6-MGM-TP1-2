@@ -20,4 +20,9 @@ abstract class AbstractChargement
     {
         return $this->poids;
     }
+
+    public function __toString(): string
+    {
+        return "{$this->getDescription()} ({$this->getPoids()} kg)";
+    }
 }
