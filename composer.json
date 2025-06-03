@@ -14,7 +14,8 @@
             "Zoo\\": "src/Zoo/",
             "Geometrie\\": "src/Geometrie/",
             "Ecommerce\\": "src/Ecommerce/",
-            "PVe\\": "src/PVe"
+            "PVe\\": "src/PVe/",
+            "Messagerie\\": "src/Messagerie/"
         }
     },
     "authors": [

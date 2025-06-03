@@ -50,6 +50,12 @@ make geometrie
 make ecommerce
 ```
 
+# TP 9 - Messagerie
+
+```shell
+make messagerie
+```
+
 # Boutique vélo
 
 ```shell
