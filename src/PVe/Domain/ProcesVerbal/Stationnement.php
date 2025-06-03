@@ -1,8 +1,8 @@
 <?php
 
-namespace PVe\ProcesVerbal;
+namespace PVe\Domain\ProcesVerbal;
 
-use PVe\AbstractProcesVerbal;
+use PVe\Domain\AbstractProcesVerbal;
 use Vehicule\Domain\AbstractVehicule;
 
 class Stationnement extends AbstractProcesVerbal

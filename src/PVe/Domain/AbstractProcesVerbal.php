@@ -1,6 +1,6 @@
 <?php
 
-namespace PVe;
+namespace PVe\Domain;
 
 use Vehicule\Domain\AbstractVehicule;
 

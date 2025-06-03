@@ -1,10 +1,12 @@
 <?php
 namespace PVe;
 
-use Ecommerce\Collection\PaiementCollection;
+use Config\Domain\Notification;
 use Ecommerce\Domain\Paiement\PaiementCB;
-use PVe\ProcesVerbal\Stationnement;
-use PVe\ProcesVerbal\VitesseExcessive;
+use PVe\Collection\ProcesVerbalCollection;
+use PVe\Domain\AvisContravention;
+use PVe\Domain\ProcesVerbal\Stationnement;
+use PVe\Domain\ProcesVerbal\VitesseExcessive;
 use Vehicule\Domain\Vehicule\Voiture;
 use Vehicule\Enum\MarqueEnum;
 
@@ -18,12 +20,11 @@ $peugeot307 = new Voiture(
     nombrePortes: 5
 );
 
-$paiements = new PaiementCollection();
+$procesVerbaux = new ProcesVerbalCollection();
+$procesVerbaux->add(new Stationnement($peugeot307));
+$procesVerbaux->add(new VitesseExcessive(120, 50, $peugeot307));
 
-$stationnement = new Stationnement($peugeot307);
-$paiements->add(new PaiementCB($stationnement->getMontant()));
+$avisContravention = new AvisContravention($procesVerbaux);
+Notification::showMessage("Montant à payer : " . $avisContravention->getMontant() . " €");
 
-$vitesse = new VitesseExcessive(120, 50, $peugeot307);
-$paiements->add(new PaiementCB($vitesse->getMontant()));
-
-$paiements->process();
+$avisContravention->encaisser(PaiementCB::class);
