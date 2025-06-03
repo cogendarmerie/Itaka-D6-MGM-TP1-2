@@ -3,6 +3,7 @@
 namespace BikeShop\Domain;
 
 use BikeShop\Interface\ProduitInterface;
+use Config\Domain\Notification;
 
 abstract class AbstractAccessoire implements ProduitInterface
 {
@@ -25,7 +26,7 @@ abstract class AbstractAccessoire implements ProduitInterface
 
     public function afficherConfiguration(): void
     {
-        echo "------------" . PHP_EOL;
-        echo "{$this->getNom()} - {$this->getPrix()} €" . PHP_EOL;
+        Notification::showSeparator();
+        Notification::showMessage("{$this->getNom()} - {$this->getPrix()} €");
     }
 }

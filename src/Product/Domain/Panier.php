@@ -2,6 +2,7 @@
 
 namespace Product\Domain;
 
+use Config\Domain\Notification;
 use Product\Collection\ProduitsCollection;
 
 class Panier
@@ -36,7 +37,7 @@ class Panier
     {
         /** @var Produit $produit */
         foreach ($this->produits->getAll() as $produit) {
-            echo $produit->getNom() . " - " . $produit->getPrix() . PHP_EOL;
+            Notification::showMessage($produit->getNom() . " - " . $produit->getPrix());
         }
     }
 
@@ -46,6 +47,6 @@ class Panier
      */
     public function afficherTotal(): void
     {
-        echo "Total : " . $this->getTotal() . PHP_EOL;
+        Notification::showSuccessMessage("Total : " . $this->getTotal());
     }
 }

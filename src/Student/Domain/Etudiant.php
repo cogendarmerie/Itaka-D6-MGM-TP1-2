@@ -1,6 +1,8 @@
 <?php
 
 namespace Student\Domain;
+use Config\Domain\Notification;
+
 class Etudiant
 {
 
@@ -49,6 +51,6 @@ class Etudiant
 
     public function afficherInformations(): void
     {
-        echo $this->nom . " " . $this->prenom . " | Moyenne : " . $this->calculerMoyenne() . PHP_EOL;
+        Notification::showMessage($this->nom . " " . $this->prenom . " | Moyenne : " . $this->calculerMoyenne());
     }
 }
