@@ -32,6 +32,12 @@ make livres
 make vehicule
 ```
 
+# TP 6 - Zoo
+
+```shell
+make zoo
+```
+
 # Boutique vélo
 
 ```shell

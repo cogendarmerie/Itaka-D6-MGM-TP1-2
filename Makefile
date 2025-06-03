@@ -26,5 +26,8 @@ livres:
 vehicule:
 	$(PHP) ./src/Vehicule/index.php
 
+zoo:
+	$(PHP) ./src/Zoo/index.php
 
-.PHONY: build dump student product velo banque livres vehicule
+
+.PHONY: build dump student product velo banque livres vehicule zoo

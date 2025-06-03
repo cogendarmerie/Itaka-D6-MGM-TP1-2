@@ -10,7 +10,8 @@
             "BikeShop\\": "src/BikeShop/",
             "CompteBancaire\\": "src/CompteBancaire/",
             "Livres\\": "src/Livres/",
-            "Vehicule\\": "src/Vehicule/"
+            "Vehicule\\": "src/Vehicule/",
+            "Zoo\\": "src/Zoo/"
         }
     },
     "authors": [
