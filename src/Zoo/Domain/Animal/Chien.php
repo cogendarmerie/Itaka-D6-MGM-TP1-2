@@ -22,4 +22,9 @@ class Chien extends AbstractAnimal
     {
         Notification::showMessage("Je suis {$this->getNom()} et j'ai {$this->getAge()} ans, je suis un {$this->getRace()->value}");
     }
+
+    public function crier(): void
+    {
+        Notification::showMessage("Wouf");
+    }
 }

@@ -21,4 +21,9 @@ class Chat extends AbstractAnimal
     {
         Notification::showMessage("Je suis {$this->getNom()} et j'ai {$this->getAge()} ans, je suis de couleur {$this->getCouleur()}");
     }
+
+    public function crier(): void
+    {
+        Notification::showMessage("Miaou");
+    }
 }

@@ -30,4 +30,12 @@ class AnimalCollection
             $animal->decrire();
         }
     }
+
+    public function crier(): void
+    {
+        /** @var AbstractAnimal $animal */
+        foreach ($this->animals as $animal) {
+            $animal->crier();
+        }
+    }
 }

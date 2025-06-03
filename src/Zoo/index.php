@@ -20,3 +20,4 @@ $animaux->add($chat);
 $animaux->add($pigeon);
 
 $animaux->decrire();
+$animaux->crier();

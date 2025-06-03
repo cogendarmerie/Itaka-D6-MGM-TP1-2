@@ -27,4 +27,6 @@ abstract class AbstractAnimal
     {
         Notification::showMessage("Je suis {$this->getNom()} et j'ai {$this->getAge()} ans");
     }
+
+    public abstract function crier(): void;
 }

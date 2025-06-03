@@ -22,4 +22,9 @@ class Oiseau extends AbstractAnimal
     {
         Notification::showMessage("Je suis {$this->getNom()} et j'ai {$this->getAge()} ans, je suis de l'éspèce des {$this->getEspece()->value}");
     }
+
+    public function crier(): void
+    {
+        Notification::showMessage("Cui-cui");
+    }
 }
