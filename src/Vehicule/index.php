@@ -1,6 +1,8 @@
 <?php
 namespace Vehicule;
 
+use Vehicule\Domain\Chargement\Caillasse;
+use Vehicule\Domain\Chargement\PaletteParpaing;
 use Vehicule\Domain\Vehicule\Camion;
 use Vehicule\Domain\Vehicule\Moto;
 use Vehicule\Domain\Vehicule\Voiture;
@@ -42,8 +44,7 @@ $camion = new Camion(
     annee: 2026,
     kilometrage: 1000,
     poidsMax: 10000,
-    chargeActuelle: 8000
 );
 $camion->afficherInfos();
-$camion->charger(1000);
-$camion->afficherInfos();
+$camion->charger(new Caillasse(8000));
+$camion->charger(new PaletteParpaing(5000));

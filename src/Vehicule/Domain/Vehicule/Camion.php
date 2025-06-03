@@ -3,7 +3,9 @@
 namespace Vehicule\Domain\Vehicule;
 
 use Config\Domain\Notification;
+use Vehicule\Collection\ChargementCollection;
 use Vehicule\Collection\EntretienCollection;
+use Vehicule\Domain\AbstractChargement;
 use Vehicule\Domain\AbstractVehicule;
 use Vehicule\Enum\MarqueEnum;
 
@@ -15,7 +17,7 @@ class Camion extends AbstractVehicule
         int $annee,
         int $kilometrage,
         private int $poidsMax,
-        private int $chargeActuelle,
+        private ChargementCollection $chargements = new ChargementCollection(),
         EntretienCollection $entretiens = new EntretienCollection()
     )
     {
@@ -29,7 +31,12 @@ class Camion extends AbstractVehicule
 
     public function getChargeActuelle(): int
     {
-        return $this->chargeActuelle;
+        return $this->chargements->getPoidsTotal();
+    }
+
+    public function getChargements(): ChargementCollection
+    {
+        return $this->chargements;
     }
 
     public function isTropCharge(): bool
@@ -37,14 +44,14 @@ class Camion extends AbstractVehicule
         return $this->getChargeActuelle() > $this->getPoidsMax();
     }
 
-    public function charger(int $poids): void
+    public function charger(AbstractChargement $chargement): void
     {
-        if ($this->chargeActuelle + $poids > $this->getPoidsMax()) {
-            Notification::showErrorMessage("Impossible de charger le véhicule : " . $this->getChargeActuelle() + $poids - $this->getPoidsMax() . "kg en trop");
+        if ($this->getChargeActuelle() + $chargement->getPoids() > $this->getPoidsMax()) {
+            Notification::showErrorMessage("Impossible de charger le véhicule : " . $this->getChargeActuelle() + $chargement->getPoids() - $this->getPoidsMax() . "kg en trop");
             return;
         }
 
-        $this->chargeActuelle += $poids;
+        $this->chargements->add($chargement);
     }
 
     public function afficherInfos(): void
