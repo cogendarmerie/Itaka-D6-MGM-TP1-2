@@ -13,7 +13,8 @@
             "Vehicule\\": "src/Vehicule/",
             "Zoo\\": "src/Zoo/",
             "Geometrie\\": "src/Geometrie/",
-            "Ecommerce\\": "src/Ecommerce/"
+            "Ecommerce\\": "src/Ecommerce/",
+            "PVe\\": "src/PVe"
         }
     },
     "authors": [

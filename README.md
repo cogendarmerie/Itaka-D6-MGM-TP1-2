@@ -55,3 +55,9 @@ make ecommerce
 ```shell
 make velo
 ```
+
+# PVe
+
+```shell
+make pve
+```

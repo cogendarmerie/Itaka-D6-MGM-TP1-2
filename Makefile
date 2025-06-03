@@ -35,5 +35,8 @@ geometrie:
 ecommerce:
 	$(PHP) ./src/Ecommerce/index.php
 
+pve:
+	$(PHP) ./src/PVe/index.php
 
-.PHONY: build dump student product velo banque livres vehicule zoo geometrie ecommerce
+
+.PHONY: build dump student product velo banque livres vehicule zoo geometrie ecommerce pve
