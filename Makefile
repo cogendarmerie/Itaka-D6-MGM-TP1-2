@@ -44,5 +44,8 @@ messagerie:
 reservation:
 	$(PHP) ./src/Reservation/index.php
 
+agence:
+	$(PHP) ./src/AgenceWeb/index.php
 
-.PHONY: build dump student product velo banque livres vehicule zoo geometrie ecommerce pve messagerie reservation
+
+.PHONY: build dump student product velo banque livres vehicule zoo geometrie ecommerce pve messagerie reservation agence

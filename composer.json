@@ -16,7 +16,8 @@
             "Ecommerce\\": "src/Ecommerce/",
             "PVe\\": "src/PVe/",
             "Messagerie\\": "src/Messagerie/",
-            "Reservation\\": "src/Reservation/"
+            "Reservation\\": "src/Reservation/",
+            "AgenceWeb\\": "src/AgenceWeb/"
         }
     },
     "authors": [
