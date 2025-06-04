@@ -4,7 +4,6 @@ namespace AgenceWeb\Domain\Tache;
 
 use AgenceWeb\Domain\AbstractTache;
 use AgenceWeb\Domain\Developer;
-use AgenceWeb\Interfacce\BillableInterface;
 
 class DevelopmentTask extends AbstractTache
 {

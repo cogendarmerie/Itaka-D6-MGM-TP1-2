@@ -10,7 +10,6 @@ use AgenceWeb\Domain\Skill;
 use AgenceWeb\Domain\Tache\DesignTask;
 use AgenceWeb\Domain\Tache\DevelopmentTask;
 use AgenceWeb\Domain\Tool\Figma;
-use AgenceWeb\Enum\ToolsEnum;
 use AgenceWeb\Exception\TaskAlreadyCompletedException;
 use Config\Domain\Notification;
 

@@ -5,8 +5,6 @@ namespace AgenceWeb\Domain\Tache;
 use AgenceWeb\Domain\AbstractTache;
 use AgenceWeb\Domain\AbstractTool;
 use AgenceWeb\Domain\Developer;
-use AgenceWeb\Enum\ToolsEnum;
-use AgenceWeb\Interfacce\BillableInterface;
 
 class DesignTask extends AbstractTache
 {
