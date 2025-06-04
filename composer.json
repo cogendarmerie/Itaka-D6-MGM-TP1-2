@@ -15,7 +15,8 @@
             "Geometrie\\": "src/Geometrie/",
             "Ecommerce\\": "src/Ecommerce/",
             "PVe\\": "src/PVe/",
-            "Messagerie\\": "src/Messagerie/"
+            "Messagerie\\": "src/Messagerie/",
+            "Reservation\\": "src/Reservation/"
         }
     },
     "authors": [

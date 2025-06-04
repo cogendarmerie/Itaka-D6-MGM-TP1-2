@@ -41,5 +41,8 @@ pve:
 messagerie:
 	$(PHP) ./src/Messagerie/index.php
 
+reservation:
+	$(PHP) ./src/Reservation/index.php
 
-.PHONY: build dump student product velo banque livres vehicule zoo geometrie ecommerce pve messagerie
+
+.PHONY: build dump student product velo banque livres vehicule zoo geometrie ecommerce pve messagerie reservation

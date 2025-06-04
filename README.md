@@ -63,6 +63,12 @@ make ecommerce
 make messagerie
 ```
 
+# TP 10 - Gestion des réservations
+
+```shell
+make reservation
+```
+
 # Boutique vélo
 
 ```shell
