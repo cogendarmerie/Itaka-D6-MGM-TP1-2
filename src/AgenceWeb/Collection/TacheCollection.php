@@ -18,6 +18,11 @@ class TacheCollection
         return $this->taches;
     }
 
+    public function get(int $index): ?AbstractTache
+    {
+        return $this->taches[$index] ?? null;
+    }
+
     public function count(): int
     {
         return count($this->taches);

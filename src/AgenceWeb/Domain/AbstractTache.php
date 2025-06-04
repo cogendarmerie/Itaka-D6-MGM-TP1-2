@@ -2,6 +2,7 @@
 
 namespace AgenceWeb\Domain;
 
+use AgenceWeb\Exception\TaskAlreadyCompletedException;
 use AgenceWeb\Interfacce\BillableInterface;
 
 abstract class AbstractTache implements BillableInterface
@@ -27,5 +28,14 @@ abstract class AbstractTache implements BillableInterface
     public function isTerminee(): bool
     {
         return $this->terminee;
+    }
+
+    public function completee(): void
+    {
+        if ($this->isTerminee()) {
+            throw new TaskAlreadyCompletedException($this);
+        }
+
+        $this->terminee = true;
     }
 }
