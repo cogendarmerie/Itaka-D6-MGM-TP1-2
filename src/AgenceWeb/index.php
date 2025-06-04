@@ -9,6 +9,7 @@ use AgenceWeb\Domain\Projet;
 use AgenceWeb\Domain\Skill;
 use AgenceWeb\Domain\Tache\DesignTask;
 use AgenceWeb\Domain\Tache\DevelopmentTask;
+use AgenceWeb\Domain\Tool\Figma;
 use AgenceWeb\Enum\ToolsEnum;
 use Config\Domain\Notification;
 
@@ -37,7 +38,7 @@ $taches = new TacheCollection();
 $taches->add(new DesignTask(
     titre: "Maquette du site web",
     developer: $designer,
-    tool: ToolsEnum::FIGMA,
+    tool: new Figma(),
     terminee: true
 ));
 $taches->add(new DevelopmentTask(
