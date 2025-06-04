@@ -6,7 +6,7 @@ use AgenceWeb\Domain\AbstractTache;
 use AgenceWeb\Domain\Developer;
 use AgenceWeb\Interfacce\BillableInterface;
 
-class DevelopmentTask extends AbstractTache implements BillableInterface
+class DevelopmentTask extends AbstractTache
 {
     public function __construct(
         string $titre,

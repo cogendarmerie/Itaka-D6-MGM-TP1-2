@@ -2,7 +2,9 @@
 
 namespace AgenceWeb\Domain;
 
-abstract class AbstractTache
+use AgenceWeb\Interfacce\BillableInterface;
+
+abstract class AbstractTache implements BillableInterface
 {
     public function __construct(
         private string $titre,

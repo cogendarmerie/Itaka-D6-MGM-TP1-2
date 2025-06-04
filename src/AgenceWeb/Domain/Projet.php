@@ -67,14 +67,8 @@ class Projet
      */
     public function calculerCout(): float
     {
-        $coutTotal = 0;
-
-        foreach ($this->taches->getAll() as $tache) {
-            if ($tache instanceof BillableInterface) {
-                $coutTotal += $tache->calculateCost();
-            }
-        }
-
-        return $coutTotal;
+        return array_sum(array_map(function (AbstractTache $tache) {
+            return $tache->calculateCost();
+        }, $this->getTaches()->getAll()));
     }
 }

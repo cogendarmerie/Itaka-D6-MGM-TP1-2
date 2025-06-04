@@ -8,7 +8,7 @@ use AgenceWeb\Domain\Developer;
 use AgenceWeb\Enum\ToolsEnum;
 use AgenceWeb\Interfacce\BillableInterface;
 
-class DesignTask extends AbstractTache implements BillableInterface
+class DesignTask extends AbstractTache
 {
     public function __construct(
         string $titre,
