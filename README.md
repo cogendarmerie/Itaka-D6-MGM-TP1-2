@@ -2,6 +2,13 @@
 
 Pour lancer chacun des projets, utilisez le fichier Makefile.
 
+# Installation
+
+```shell
+make build
+make dump
+```
+
 # TP 1 - Student
 
 ```shell
